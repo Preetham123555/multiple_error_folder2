@@ -1,8 +1,9 @@
+
 var output = document.getElementById('out');
 var button = document.getElementById('run');
 
 function render() {
-  if (!output) {
+  if (output === null) {
     return;
   }
   output.innerHTML = '';
@@ -13,6 +14,6 @@ function render() {
   }
 }
 
-if (button) {
+if (button !== null) {
   button.addEventListener('click', render);
 }
