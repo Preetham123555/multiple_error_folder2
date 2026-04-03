@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 
 function readConfig(path) {
@@ -6,8 +7,4 @@ function readConfig(path) {
   } catch (error) {
     return {};
   }
-}
-
-function readConfigAgain(path) {
-  return readConfig(path);
 }

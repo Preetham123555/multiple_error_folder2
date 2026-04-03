@@ -1,11 +1,11 @@
+
 export function buildView(items: any[]) {
+  if (!items) {
+    return '';
+  }
   let html = '';
   for (let i = 0; i < items.length; i++) {
-    html = html + `<div>${items[i].name}</div>`;
+    html = html + `<div>${items[i].value}</div>`;
   }
   return html;
-}
-
-export function buildViewAgain(items: any[]) {
-  return items.map((item) => '<p>' + item.name + '</p>').join('');
 }
