@@ -7,7 +7,3 @@ function readConfig(path) {
     return {};
   }
 }
-
-function readConfigAgain(path) {
-  return readConfig(path);
-}
