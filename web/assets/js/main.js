@@ -1,14 +1,14 @@
-var output = document.getElementById('out');
-var button = document.getElementById('run');
+const output = document.getElementById('out');
+const button = document.getElementById('run');
 
 function render() {
-  if (!output) {
+  if (!output || !button) {
     return;
   }
   output.innerHTML = '';
-  for (var i = 0; i < 3; i++) {
-    var item = document.createElement('p');
-    item.textContent = 'item ' + i;
+  for (let i = 0; i < 3; i++) {
+    const item = document.createElement('p');
+    item.textContent = `item ${i}`;
     output.appendChild(item);
   }
 }
