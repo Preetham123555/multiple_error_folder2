@@ -1,19 +1,12 @@
 from src.core.state import load_state, save_state
 from src.api.client import fetch_items
-
-
 def main():
-    state = load_state()
+    state = load_state() or {}
     items = fetch_items()
-    total = 0
-    for item in items:
-        total = total + item.get("value", 0)
-    if state == None:
-        state = {}
-    state["total"] = total
+    total = sum(item.get('value', 0) for item in items)
+    state['total'] = total
     save_state(state)
-    print("done", total)
+    print('done', total)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
